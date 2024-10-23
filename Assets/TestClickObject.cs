@@ -28,12 +28,12 @@ public class TestClickObject : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        myRenderer.enabled = false;
+        //myRenderer.enabled = false;
         
     }
 
     private void OnMouseExit()
     {
-        myRenderer.enabled=true;
+        //myRenderer.enabled=true;
     }
 }
