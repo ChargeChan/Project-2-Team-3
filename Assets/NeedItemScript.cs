@@ -20,14 +20,21 @@ public class NeedItemScript : MonoBehaviour
 
     public bool GiveItem(string item)
     {
-        if(item == itemNeeded)
+        if(locked && item == itemNeeded)
         {
             locked = false;
+            Open();
             return true;
         }
         else
         {
             return false;
         }
+    }
+
+    public void Open()
+    {
+        //gameObject.GetComponentInChildren<Renderer>().enabled = false;
+        gameObject.GetComponent<Renderer>().enabled = false;
     }
 }

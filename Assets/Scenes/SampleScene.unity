@@ -606,6 +606,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7788220127886019195, guid: cad9988e364aad44dba3721de0b2279f, type: 3}
+      propertyPath: myIndex
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8245886008245022297, guid: cad9988e364aad44dba3721de0b2279f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 4
@@ -919,13 +923,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 119664, guid: 971412afe90b27640b1c78c0641deec9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 133660, guid: 971412afe90b27640b1c78c0641deec9, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Chest_01
       objectReference: {fileID: 0}
     - target: {fileID: 414680, guid: 971412afe90b27640b1c78c0641deec9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.6426983
+      value: 2.361
       objectReference: {fileID: 0}
     - target: {fileID: 414680, guid: 971412afe90b27640b1c78c0641deec9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -933,7 +941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 414680, guid: 971412afe90b27640b1c78c0641deec9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.3830502
+      value: -2.101
       objectReference: {fileID: 0}
     - target: {fileID: 414680, guid: 971412afe90b27640b1c78c0641deec9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -963,6 +971,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2322192, guid: 971412afe90b27640b1c78c0641deec9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2351152, guid: 971412afe90b27640b1c78c0641deec9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -988,6 +1004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2bd101f9ee7074aa615948c6d458e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemNeeded: Crystal
 --- !u!1 &781800926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1893,6 +1910,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7788220127886019195, guid: cad9988e364aad44dba3721de0b2279f, type: 3}
+      propertyPath: myIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8245886008245022297, guid: cad9988e364aad44dba3721de0b2279f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 3
@@ -2061,6 +2082,10 @@ PrefabInstance:
     - target: {fileID: 179417577080073974, guid: cad9988e364aad44dba3721de0b2279f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788220127886019195, guid: cad9988e364aad44dba3721de0b2279f, type: 3}
+      propertyPath: myIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8245886008245022297, guid: cad9988e364aad44dba3721de0b2279f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -2345,6 +2370,10 @@ PrefabInstance:
     - target: {fileID: 179417577080073974, guid: cad9988e364aad44dba3721de0b2279f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788220127886019195, guid: cad9988e364aad44dba3721de0b2279f, type: 3}
+      propertyPath: myIndex
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8245886008245022297, guid: cad9988e364aad44dba3721de0b2279f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
