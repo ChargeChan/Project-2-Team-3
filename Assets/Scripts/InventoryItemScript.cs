@@ -88,4 +88,6 @@ public class InventoryItemScript : MonoBehaviour
             transform.position = Input.mousePosition;
         }
     }
+
+    
 }
