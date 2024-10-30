@@ -8,7 +8,7 @@ public class PianoCanvasScript : MonoBehaviour
     public GameObject[] slots = new GameObject[5];
     private int codeCounter = 0;
     private string codeEntered = "";
-    private string runePassword = "oneoneoneoneone";
+    private string runePassword = "CrystalCrystalCrystalCrystalCrystal";
 
     public MidiStreamPlayer midiStreamPlayer;
     private MPTKEvent mptkEvent;
@@ -59,12 +59,14 @@ public class PianoCanvasScript : MonoBehaviour
         if(codeEntered == runePassword)
         {
             Debug.Log("correct password");
+            StartCoroutine(RightCode());
         }
         else
         {
             Debug.Log("wrong password");
+            StartCoroutine(WrongCode());
         }
-        ClearRunes();
+        //ClearRunes();
     }
 
     // midiStreamPlayer takes a second to load so a buffer is needed
@@ -78,5 +80,37 @@ public class PianoCanvasScript : MonoBehaviour
             Channel = 0
         }; // Instrument are defined by channel (from 0 to 15). So at any time, only 16 differents instruments can be used simultaneously.
         midiStreamPlayer.MPTK_PlayEvent(PatchChange);
+    }
+
+    private IEnumerator WrongCode()
+    {
+        yield return new WaitForSeconds(0.2f);
+        //play some incorrect chime
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].SendMessage("ColorIndicate", "wrong");
+        }
+        yield return new WaitForSeconds(2);
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].SendMessage("ColorIndicate", "none");
+        }
+        ClearRunes();
+    }
+
+    private IEnumerator RightCode()
+    {
+        yield return new WaitForSeconds(0.2f);
+        //play some correct chime
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].SendMessage("ColorIndicate", "right");
+        }
+        yield return new WaitForSeconds(2);
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].SendMessage("ColorIndicate", "none");
+        }
+        ClearRunes();
     }
 }
