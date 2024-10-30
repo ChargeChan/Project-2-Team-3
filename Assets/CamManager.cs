@@ -68,6 +68,7 @@ public class CamManager : MonoBehaviour
         for (int i = 0; i < cameras.Length; i++)
         {
             cameras[i].gameObject.SetActive(i == index);
+            cameras[i].gameObject.GetComponent<AudioListener>().enabled = (i== index);
         }
         currentCameraIndex = index;
     }
