@@ -119,12 +119,26 @@ public class ArrangeCanvasScript : MonoBehaviour
         StartCoroutine(WaitForNotes());
     }
 
+    private void CheckSolution()
+    {
+        for (int i = 1; i < notes.Count; i++)
+        {
+            if (notes[i - 1] > notes[i])
+            {
+                //Debug.Log("Failed " + notes[i - 1] + ">" + notes[i]);
+                return;
+            }
+        }
+        Debug.Log("Correct solution");
+        StartCoroutine(PlayCorrectChime());
+    }
+
     IEnumerator WaitForNotes()
     {
         yield return new WaitForSeconds(0.3f);
         for(int i=0;  i < notes.Count; i++)
         {
-            Debug.Log(notes[i]);
+            //Debug.Log(notes[i]);
         }
         StartCoroutine(PlayAllNotes());
     }
@@ -157,5 +171,18 @@ public class ArrangeCanvasScript : MonoBehaviour
 
         mptkEvent = new MPTKEvent() { Value = 65+12, Duration = 300, Channel = 1 };
         midiStreamPlayer.MPTK_PlayEvent(mptkEvent);
+        CheckSolution();
+    }
+
+    private IEnumerator PlayCorrectChime()
+    {
+        int[] correctChimeNotes = { 65, 67, 68, 70, 72, 73, 75, 77 };
+        yield return new WaitForSeconds(0.8f);
+        for(int i = 0; i < correctChimeNotes.Length;i++)
+        {
+            mptkEvent = new MPTKEvent() { Value = correctChimeNotes[i], Duration = 100, Channel = 1 };
+            midiStreamPlayer.MPTK_PlayEvent(mptkEvent);
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 }
