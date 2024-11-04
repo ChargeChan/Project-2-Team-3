@@ -35,6 +35,8 @@ public class PianoCanvasScript : MonoBehaviour
 
     public void PlayRune(string rune)
     {
+        if (codeCounter >= slots.Length)
+            return;
         slots[codeCounter].SendMessage("SetRune", rune);
         codeEntered += rune;
         codeCounter++;
