@@ -17,6 +17,7 @@ public class ArrangeCanvasScript : MonoBehaviour
     private bool isBlockMoving = false;
     private string shiftDirection;
     private bool shifted = false;
+    private bool isPlaying = false;
 
     public MidiStreamPlayer midiStreamPlayer;
     private MPTKEvent mptkEvent;
@@ -110,6 +111,7 @@ public class ArrangeCanvasScript : MonoBehaviour
 
     public void GatherNotes()
     {
+        if (isPlaying) return;
         notes.Clear();
         Debug.ClearDeveloperConsole();
         for (int i = 0; i < blocks.Length; i++)
@@ -157,6 +159,7 @@ public class ArrangeCanvasScript : MonoBehaviour
 
     private IEnumerator PlayAllNotes()
     {
+        isPlaying = true;
         //yield return new WaitForSeconds(1);
         //play first F
         mptkEvent = new MPTKEvent() { Value = 65, Duration = 300, Channel = 1 };
@@ -172,6 +175,7 @@ public class ArrangeCanvasScript : MonoBehaviour
         mptkEvent = new MPTKEvent() { Value = 65+12, Duration = 300, Channel = 1 };
         midiStreamPlayer.MPTK_PlayEvent(mptkEvent);
         CheckSolution();
+        isPlaying = false;
     }
 
     private IEnumerator PlayCorrectChime()
