@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PianoPhysicalScript : MonoBehaviour
+public class ObjectClickCanvasScript : MonoBehaviour
 {
-    public Canvas pianoOverlay;
+    public Canvas myCanvas;
     // Start is called before the first frame update
-    
+
     private void OnMouseDown()
     {
-        pianoOverlay.enabled = true;
+        myCanvas.enabled = true;
     }
 }

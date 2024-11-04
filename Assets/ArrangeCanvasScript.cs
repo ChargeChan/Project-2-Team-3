@@ -24,12 +24,22 @@ public class ArrangeCanvasScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for(int i=0;  i<slots.Length; i++)
+        
+        for (int i=0;  i<slots.Length; i++)
         {
             blocks[i].SendMessage("SetIndex", i);
-            blocks[i].transform.position = slots[i].transform.position;
+            //blocks[i].transform.position = slots[i].transform.position;
         }
         StartCoroutine(SetInstrument());
+    }
+
+    public void SetPositions()
+    {
+        Debug.Log("enable");
+        for (int i = 0; i < slots.Length; i++)
+        {
+            //blocks[i].transform.position = slots[i].transform.position;
+        }
     }
 
     // Update is called once per frame
