@@ -37,7 +37,7 @@ public class InventoryItemScript : MonoBehaviour
 
     public void ClickItem()
     {
-        
+        camera = Camera.main;
 
         if (!onCursor)
         {
