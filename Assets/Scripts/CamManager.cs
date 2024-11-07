@@ -10,8 +10,10 @@ public class CamManager : MonoBehaviour
     public Button rightArrow;
     public Button forwardArrow;
     public Button backArrow;
+    public Button Leave;
 
     private int currentCameraIndex = 0;
+    private const int jigsawCameraIndex = 21;
 
     // Holds navigation options for each camera
     private Dictionary<int, CameraNavigation> cameraNavigationMap;
@@ -30,6 +32,9 @@ public class CamManager : MonoBehaviour
         rightArrow.onClick.AddListener(MoveRight);
         forwardArrow.onClick.AddListener(MoveForward);
         backArrow.onClick.AddListener(MoveBackward);
+        Leave.onClick.AddListener(MoveLeave);
+
+
     }
 
     void InitializeNavigationMap()
@@ -57,12 +62,16 @@ public class CamManager : MonoBehaviour
             {17,  new CameraNavigation(back: 18, forward: 15, left: 7, right: 5)},
             {18,  new CameraNavigation(back: 17, forward: 8, left: 9)},
             {19,  new CameraNavigation(forward: 14, left: 13)},
-            {20,  new CameraNavigation(forward: 12, right: 13)}
-            // Continue defining mappings for each camera...
+            {20,  new CameraNavigation(forward: 12, right: 13)},
+            {21,  new CameraNavigation(leave: 13)}
+
+
+
+
         };
     }
 
-    void SetActiveCamera(int index)
+    public void SetActiveCamera(int index)
     {
         // Deactivate all cameras
         for (int i = 0; i < cameras.Length; i++)
@@ -70,6 +79,32 @@ public class CamManager : MonoBehaviour
             cameras[i].gameObject.SetActive(i == index);
         }
         currentCameraIndex = index;
+
+        // Hide UI if viewing the jigsaw camera, else show and update UI
+        if (currentCameraIndex == jigsawCameraIndex)
+        {
+            
+            ToggleUI(false);
+        }
+        else
+        {
+            ToggleUI(true);
+            UpdateUI();
+        }
+    }
+
+    public Camera GetCamera(int cameraIndex)
+    {
+        // Return the camera at the specified index if it's valid
+        if (cameraIndex >= 0 && cameraIndex < cameras.Length)
+        {
+            return cameras[cameraIndex];
+        }
+        else
+        {
+            Debug.LogError("Camera index out of range!");
+            return null;
+        }
     }
 
     void UpdateUI()
@@ -78,8 +113,17 @@ public class CamManager : MonoBehaviour
         CameraNavigation nav = cameraNavigationMap[currentCameraIndex];
         forwardArrow.gameObject.SetActive(nav.forward != -1);
         backArrow.gameObject.SetActive(nav.back != -1);
+        Leave.gameObject.SetActive(nav.leave != -1);
         leftArrow.gameObject.SetActive(nav.left != -1);
         rightArrow.gameObject.SetActive(nav.right != -1);
+    }
+
+    void ToggleUI(bool show)
+    {
+        leftArrow.gameObject.SetActive(show);
+        rightArrow.gameObject.SetActive(show);
+        forwardArrow.gameObject.SetActive(show);
+        backArrow.gameObject.SetActive(show);
     }
 
     // Movement functions that check for valid navigation options
@@ -110,18 +154,26 @@ public class CamManager : MonoBehaviour
         if (targetCamera != -1) SetActiveCamera(targetCamera);
         UpdateUI();
     }
+
+    void MoveLeave()
+    {
+        int targetCamera = cameraNavigationMap[currentCameraIndex].leave;
+        if (targetCamera != -1) SetActiveCamera(targetCamera);
+        UpdateUI();
+    }
 }
 
 // Helper class to store navigation options for each camera
 public class CameraNavigation
 {
-    public int left, right, forward, back;
+    public int left, right, forward, back, leave;
 
-    public CameraNavigation(int left = -1, int right = -1, int forward = -1, int back = -1)
+    public CameraNavigation(int left = -1, int right = -1, int forward = -1, int back = -1, int leave =-1)
     {
         this.left = left;
         this.right = right;
         this.forward = forward;
         this.back = back;
+        this.leave = leave;
     }
 }
