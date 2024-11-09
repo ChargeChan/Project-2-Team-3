@@ -14,6 +14,8 @@ public class CamManager : MonoBehaviour
 
     private int currentCameraIndex = 0;
     private const int jigsawCameraIndex = 21;
+    private JigsawClick jigsawClick;
+
 
     // Holds navigation options for each camera
     private Dictionary<int, CameraNavigation> cameraNavigationMap;
@@ -33,8 +35,19 @@ public class CamManager : MonoBehaviour
         forwardArrow.onClick.AddListener(MoveForward);
         backArrow.onClick.AddListener(MoveBackward);
         Leave.onClick.AddListener(MoveLeave);
+        Leave.onClick.AddListener(LeavePuzzle);
+
+        jigsawClick = FindObjectOfType<JigsawClick>();
 
 
+    }
+
+    public void LeavePuzzle()
+    {
+        if (jigsawClick != null)
+        {
+            jigsawClick.LeavePuzzle();  // Calls the LeavePuzzle() method from JigsawClick script
+        }
     }
 
     void InitializeNavigationMap()
@@ -76,19 +89,23 @@ public class CamManager : MonoBehaviour
         // Deactivate all cameras
         for (int i = 0; i < cameras.Length; i++)
         {
-            cameras[i].gameObject.SetActive(i == index);
+            cameras[i].gameObject.SetActive(i == index); // Only activate the desired camera
         }
+
         currentCameraIndex = index;
 
-        // Hide UI if viewing the jigsaw camera, else show and update UI
-        if (currentCameraIndex == jigsawCameraIndex)
+        // Show or hide UI elements based on the camera index
+        if (index == jigsawCameraIndex) // Cam21
         {
-            
-            ToggleUI(false);
+            // Only show the Leave button and hide other UI elements
+            ToggleUI(false); // Hide navigation UI elements
+            ShowLeaveButton(true); // Show the Leave button
         }
         else
         {
-            ToggleUI(true);
+            // Show main UI for other cameras
+            ShowLeaveButton(false); // Hide the Leave button
+            ToggleUI(true); // Show main UI
             UpdateUI();
         }
     }
@@ -116,6 +133,11 @@ public class CamManager : MonoBehaviour
         Leave.gameObject.SetActive(nav.leave != -1);
         leftArrow.gameObject.SetActive(nav.left != -1);
         rightArrow.gameObject.SetActive(nav.right != -1);
+    }
+
+    public void ShowLeaveButton(bool isVisible)
+    {
+        Leave.gameObject.SetActive(isVisible); // Make the Leave button visible or hidden
     }
 
     void ToggleUI(bool show)
