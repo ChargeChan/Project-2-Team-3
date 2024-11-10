@@ -25,7 +25,6 @@ public class JigsawClick : MonoBehaviour
 
             if (activeCamera != null)
             {
-                Debug.Log("Current active camera: " + activeCamera.name);
 
                 // Only attempt to interact if in the initial view
                 if (Input.GetMouseButtonDown(0))
@@ -74,15 +73,18 @@ public class JigsawClick : MonoBehaviour
             selectedPiece.transform.position = worldPosition + offset;
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && selectedPiece != null)
         {
             if (selectedPiece != null)
             {
                 Debug.Log("Deselected piece: " + selectedPiece.name);
             }
+            
             selectedPiece = null;
         }
     }
+
+    
 
 
     private RaycastHit GetRaycastHit(Camera camera)
