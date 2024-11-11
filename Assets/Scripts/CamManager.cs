@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CamManager : MonoBehaviour
 {
     public Camera[] cameras;
+    public Camera pipeCamera;
     public Button leftArrow;
     public Button rightArrow;
     public Button forwardArrow;
@@ -22,7 +23,7 @@ public class CamManager : MonoBehaviour
         InitializeNavigationMap();
 
         // Set the first camera as active
-        SetActiveCamera(0);
+        SetActiveCamera(21);
         UpdateUI();
 
         // Assign button functionality
@@ -57,7 +58,9 @@ public class CamManager : MonoBehaviour
             {17,  new CameraNavigation(back: 18, forward: 15, left: 7, right: 5)},
             {18,  new CameraNavigation(back: 17, forward: 8, left: 9)},
             {19,  new CameraNavigation(forward: 14, left: 13)},
-            {20,  new CameraNavigation(forward: 12, right: 13)}
+            {20,  new CameraNavigation(forward: 12, right: 13)},
+            {21,  new CameraNavigation(back: 22)},
+            {22,  new CameraNavigation(forward: 21)}
             // Continue defining mappings for each camera...
         };
     }
@@ -69,9 +72,11 @@ public class CamManager : MonoBehaviour
         {
             cameras[i].gameObject.SetActive(i == index);
             cameras[i].gameObject.GetComponent<AudioListener>().enabled = (i== index);
-            //cameras[i].tag = "MainCamera";
+            cameras[i].tag = "Untagged";
         }
         currentCameraIndex = index;
+        GameManager.Instance.SetCurrentCameraIndex(index);
+        cameras[index].tag = "MainCamera";
     }
 
     void UpdateUI()
@@ -112,6 +117,20 @@ public class CamManager : MonoBehaviour
         if (targetCamera != -1) SetActiveCamera(targetCamera);
         UpdateUI();
     }
+
+    IEnumerator WaitToRenderPipe()
+    {
+        yield return new WaitForEndOfFrame();
+        pipeCamera.enabled = false;
+        yield return new WaitForEndOfFrame();
+        pipeCamera.enabled = true;
+        pipeCamera.Render();
+    }
+
+    public int GetCurrentCameraIndex()
+    {
+        return currentCameraIndex;
+    }
 }
 
 // Helper class to store navigation options for each camera
@@ -127,3 +146,5 @@ public class CameraNavigation
         this.back = back;
     }
 }
+
+

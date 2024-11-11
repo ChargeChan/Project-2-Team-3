@@ -6,6 +6,7 @@ public class WallRuneScript : MonoBehaviour
 {
     public Material materialOff;
     public Material materialOn;
+    public int note;
     private Renderer myRenderer;
     // Start is called before the first frame update
     void Start()
@@ -14,10 +15,12 @@ public class WallRuneScript : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayNote(int note)
     {
-        
+        if (note == this.note)
+        {
+            TurnOn();
+        }
     }
 
     public void TurnOn()

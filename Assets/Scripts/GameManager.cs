@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,7 +8,7 @@ public class GameManager : MonoBehaviour
     private GameObject inventoryBar;
     private static GameManager _instance;
     [SerializeField] private string[] inventory;
-    
+    private int currentCameraIndex = 0;
 
     private GameManager()
     {
@@ -23,12 +24,8 @@ public class GameManager : MonoBehaviour
                 GameObject go = new GameObject();
                 go.AddComponent<GameManager>();
                 _instance = go.GetComponent<GameManager>();
-
                 DontDestroyOnLoad(go);
-
-                
             }
-
             return _instance;
         }
     }
@@ -39,15 +36,14 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void AddItemToIneventory(string item)
     {
-
+        if(item == "PanFlute")
+        {
+            Debug.Log("panflute");
+            inventoryBar.SendMessage("EnablePanFlute");
+            return;
+        }
         for(int i=0; i<inventory.Length; i++)
         {
             if(inventory[i] == null)
@@ -64,5 +60,15 @@ public class GameManager : MonoBehaviour
     {
         inventory[position] = null;
         inventoryBar.SendMessage("SetInventory", inventory);
+    }
+
+    public void SetCurrentCameraIndex(int index)
+    {
+        currentCameraIndex = index;
+    }
+
+    public int GetCurrentCameraIndex()
+    {
+        return currentCameraIndex;
     }
 }
