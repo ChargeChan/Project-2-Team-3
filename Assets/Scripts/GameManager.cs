@@ -40,7 +40,6 @@ public class GameManager : MonoBehaviour
     {
         if(item == "PanFlute")
         {
-            Debug.Log("panflute");
             inventoryBar.SendMessage("EnablePanFlute");
             return;
         }
