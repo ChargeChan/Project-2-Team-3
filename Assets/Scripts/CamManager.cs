@@ -22,7 +22,7 @@ public class CamManager : MonoBehaviour
         InitializeNavigationMap();
 
         // Set the first camera as active
-        SetActiveCamera(0);
+        SetActiveCamera(14);
         UpdateUI();
 
         // Assign button functionality
@@ -69,6 +69,7 @@ public class CamManager : MonoBehaviour
         {
             cameras[i].gameObject.SetActive(i == index);
             cameras[i].gameObject.GetComponent<AudioListener>().enabled = (i== index);
+            //cameras[i].tag = "MainCamera";
         }
         currentCameraIndex = index;
     }

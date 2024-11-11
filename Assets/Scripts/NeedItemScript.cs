@@ -32,7 +32,7 @@ public class NeedItemScript : MonoBehaviour
         }
     }
 
-    public void Open()
+    public virtual void Open()
     {
         //gameObject.GetComponentInChildren<Renderer>().enabled = false;
         gameObject.GetComponent<Renderer>().enabled = false;
