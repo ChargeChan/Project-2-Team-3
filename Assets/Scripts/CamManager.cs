@@ -26,7 +26,8 @@ public class CamManager : MonoBehaviour
         InitializeNavigationMap();
 
         // Set the first camera as active
-        SetActiveCamera(13);
+
+        SetActiveCamera(0);
         UpdateUI();
 
         // Assign button functionality
@@ -34,6 +35,7 @@ public class CamManager : MonoBehaviour
         rightArrow.onClick.AddListener(MoveRight);
         forwardArrow.onClick.AddListener(MoveForward);
         backArrow.onClick.AddListener(MoveBackward);
+
         Leave.onClick.AddListener(MoveLeave);
         Leave.onClick.AddListener(LeavePuzzle);
 
@@ -48,6 +50,7 @@ public class CamManager : MonoBehaviour
         {
             jigsawClick.LeavePuzzle();  // Calls the LeavePuzzle() method from JigsawClick script
         }
+
     }
 
     void InitializeNavigationMap()
@@ -75,6 +78,7 @@ public class CamManager : MonoBehaviour
             {17,  new CameraNavigation(back: 18, forward: 15, left: 7, right: 5)},
             {18,  new CameraNavigation(back: 17, forward: 8, left: 9)},
             {19,  new CameraNavigation(forward: 14, left: 13)},
+
             {20,  new CameraNavigation(forward: 12, right: 13)},
             {21,  new CameraNavigation(leave: 13)}
 
@@ -85,6 +89,7 @@ public class CamManager : MonoBehaviour
     }
 
     public void SetActiveCamera(int index)
+
     {
         // Deactivate all cameras
         for (int i = 0; i < cameras.Length; i++)
@@ -122,6 +127,7 @@ public class CamManager : MonoBehaviour
             Debug.LogError("Camera index out of range!");
             return null;
         }
+
     }
 
     void UpdateUI()
@@ -130,10 +136,13 @@ public class CamManager : MonoBehaviour
         CameraNavigation nav = cameraNavigationMap[currentCameraIndex];
         forwardArrow.gameObject.SetActive(nav.forward != -1);
         backArrow.gameObject.SetActive(nav.back != -1);
+
         Leave.gameObject.SetActive(nav.leave != -1);
+
         leftArrow.gameObject.SetActive(nav.left != -1);
         rightArrow.gameObject.SetActive(nav.right != -1);
     }
+
 
     public void ShowLeaveButton(bool isVisible)
     {
@@ -177,25 +186,31 @@ public class CamManager : MonoBehaviour
         UpdateUI();
     }
 
+
     void MoveLeave()
     {
         int targetCamera = cameraNavigationMap[currentCameraIndex].leave;
         if (targetCamera != -1) SetActiveCamera(targetCamera);
         UpdateUI();
     }
+
 }
 
 // Helper class to store navigation options for each camera
 public class CameraNavigation
 {
+
     public int left, right, forward, back, leave;
 
     public CameraNavigation(int left = -1, int right = -1, int forward = -1, int back = -1, int leave =-1)
+
     {
         this.left = left;
         this.right = right;
         this.forward = forward;
         this.back = back;
+
         this.leave = leave;
+
     }
 }
