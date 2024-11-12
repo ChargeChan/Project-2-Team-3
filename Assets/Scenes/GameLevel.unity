@@ -571,6 +571,7 @@ GameObject:
   - component: {fileID: 89402349}
   - component: {fileID: 89402348}
   - component: {fileID: 89402347}
+  - component: {fileID: 89402351}
   m_Layer: 0
   m_Name: Piece (9)
   m_TagString: Jigsaw
@@ -730,6 +731,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &89402351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89402344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &90049768
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,6 +848,7 @@ GameObject:
   - component: {fileID: 94887643}
   - component: {fileID: 94887642}
   - component: {fileID: 94887641}
+  - component: {fileID: 94887645}
   m_Layer: 0
   m_Name: Piece (1)
   m_TagString: Jigsaw
@@ -994,6 +1008,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &94887645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94887638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &135642034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,6 +1033,7 @@ GameObject:
   - component: {fileID: 135642039}
   - component: {fileID: 135642038}
   - component: {fileID: 135642037}
+  - component: {fileID: 135642041}
   m_Layer: 0
   m_Name: Piece (8)
   m_TagString: Jigsaw
@@ -1166,6 +1193,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &135642041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135642034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &137382153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3465,6 +3504,7 @@ GameObject:
   - component: {fileID: 440544942}
   - component: {fileID: 440544941}
   - component: {fileID: 440544940}
+  - component: {fileID: 440544944}
   m_Layer: 0
   m_Name: Piece (0)
   m_TagString: Jigsaw
@@ -3624,6 +3664,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &440544944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440544937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &461611612
 Mesh:
   m_ObjectHideFlags: 0
@@ -5153,6 +5205,7 @@ GameObject:
   - component: {fileID: 627283959}
   - component: {fileID: 627283958}
   - component: {fileID: 627283957}
+  - component: {fileID: 627283961}
   m_Layer: 0
   m_Name: Piece (13)
   m_TagString: Jigsaw
@@ -5312,6 +5365,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &627283961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627283954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &648643444
 GameObject:
   m_ObjectHideFlags: 0
@@ -6758,6 +6823,7 @@ GameObject:
   - component: {fileID: 801855368}
   - component: {fileID: 801855367}
   - component: {fileID: 801855366}
+  - component: {fileID: 801855370}
   m_Layer: 0
   m_Name: Piece (5)
   m_TagString: Jigsaw
@@ -6917,6 +6983,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &801855370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801855363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &803329189
 GameObject:
   m_ObjectHideFlags: 0
@@ -7114,6 +7192,7 @@ GameObject:
   - component: {fileID: 818175102}
   - component: {fileID: 818175101}
   - component: {fileID: 818175100}
+  - component: {fileID: 818175104}
   m_Layer: 0
   m_Name: Piece (6)
   m_TagString: Jigsaw
@@ -7273,6 +7352,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &818175104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818175097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &822204024
 GameObject:
   m_ObjectHideFlags: 0
@@ -7462,6 +7553,7 @@ GameObject:
   - component: {fileID: 871580174}
   - component: {fileID: 871580173}
   - component: {fileID: 871580172}
+  - component: {fileID: 871580176}
   m_Layer: 0
   m_Name: Piece (3)
   m_TagString: Jigsaw
@@ -7621,6 +7713,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &871580176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871580169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &875695862
 GameObject:
   m_ObjectHideFlags: 0
@@ -9676,6 +9780,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1294850129}
+  - component: {fileID: 1294850130}
   m_Layer: 0
   m_Name: Jigsaw
   m_TagString: Untagged
@@ -9692,7 +9797,7 @@ Transform:
   m_GameObject: {fileID: 1294850128}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.02, y: 2.66, z: -11.348}
+  m_LocalPosition: {x: -11.011, y: 2.66, z: -11.316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9714,6 +9819,21 @@ Transform:
   - {fileID: 1455637301}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1294850130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294850128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dcc8d2afb1a34f41b40097b943c2764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleParent: {fileID: 1294850128}
+  shuffleAreaCenter: {x: -13.3, y: 5, z: -10.5}
+  shuffleAreaSize: {x: 1, y: 1, z: 0.5}
 --- !u!1 &1316835651
 GameObject:
   m_ObjectHideFlags: 0
@@ -9727,6 +9847,7 @@ GameObject:
   - component: {fileID: 1316835656}
   - component: {fileID: 1316835655}
   - component: {fileID: 1316835654}
+  - component: {fileID: 1316835658}
   m_Layer: 0
   m_Name: Piece (10)
   m_TagString: Jigsaw
@@ -9886,6 +10007,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1316835658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316835651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1328488209
 GameObject:
   m_ObjectHideFlags: 0
@@ -9899,6 +10032,7 @@ GameObject:
   - component: {fileID: 1328488214}
   - component: {fileID: 1328488213}
   - component: {fileID: 1328488212}
+  - component: {fileID: 1328488216}
   m_Layer: 0
   m_Name: Piece (7)
   m_TagString: Jigsaw
@@ -10058,6 +10192,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1328488216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328488209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1334139369
 GameObject:
   m_ObjectHideFlags: 0
@@ -10071,6 +10217,7 @@ GameObject:
   - component: {fileID: 1334139374}
   - component: {fileID: 1334139373}
   - component: {fileID: 1334139372}
+  - component: {fileID: 1334139376}
   m_Layer: 0
   m_Name: Piece (12)
   m_TagString: Jigsaw
@@ -10230,6 +10377,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1334139376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334139369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1413953902
 GameObject:
   m_ObjectHideFlags: 0
@@ -10327,6 +10486,7 @@ GameObject:
   - component: {fileID: 1455637305}
   - component: {fileID: 1455637304}
   - component: {fileID: 1455637303}
+  - component: {fileID: 1455637307}
   m_Layer: 0
   m_Name: Piece (14)
   m_TagString: Jigsaw
@@ -10486,6 +10646,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1455637307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455637300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1459758904
 GameObject:
   m_ObjectHideFlags: 0
@@ -10606,6 +10778,7 @@ GameObject:
   - component: {fileID: 1499075680}
   - component: {fileID: 1499075679}
   - component: {fileID: 1499075678}
+  - component: {fileID: 1499075682}
   m_Layer: 0
   m_Name: Piece (11)
   m_TagString: Jigsaw
@@ -10765,6 +10938,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1499075682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499075675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1502729686
 GameObject:
   m_ObjectHideFlags: 0
@@ -12184,6 +12369,7 @@ GameObject:
   - component: {fileID: 1735868796}
   - component: {fileID: 1735868795}
   - component: {fileID: 1735868794}
+  - component: {fileID: 1735868798}
   m_Layer: 0
   m_Name: Piece (15)
   m_TagString: Jigsaw
@@ -12343,6 +12529,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1735868798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735868791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1742460928
 GameObject:
   m_ObjectHideFlags: 0
@@ -14777,6 +14975,7 @@ GameObject:
   - component: {fileID: 1890317098}
   - component: {fileID: 1890317097}
   - component: {fileID: 1890317096}
+  - component: {fileID: 1890317100}
   m_Layer: 0
   m_Name: Piece (4)
   m_TagString: Jigsaw
@@ -14936,6 +15135,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1890317100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890317093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1951048474
 GameObject:
   m_ObjectHideFlags: 0
@@ -15222,6 +15433,7 @@ GameObject:
   - component: {fileID: 1981397160}
   - component: {fileID: 1981397159}
   - component: {fileID: 1981397158}
+  - component: {fileID: 1981397162}
   m_Layer: 0
   m_Name: Piece (2)
   m_TagString: Jigsaw
@@ -15381,6 +15593,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1981397162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981397155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb2d2dca67d46745a8c5a3753ff5e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1982754212
 GameObject:
   m_ObjectHideFlags: 0
