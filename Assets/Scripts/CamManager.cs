@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CamManager : MonoBehaviour
 {
     public Camera[] cameras;
+    public Camera pipeCamera;
     public Button leftArrow;
     public Button rightArrow;
     public Button forwardArrow;
@@ -77,8 +78,9 @@ public class CamManager : MonoBehaviour
             {19,  new CameraNavigation(forward: 14, left: 13)},
             {20,  new CameraNavigation(forward: 12, right: 13)},
             {21,  new CameraNavigation(leave: 13)}
-
-
+            {22,  new CameraNavigation(back: 23)},
+            {23,  new CameraNavigation(forward: 22)}
+            // Continue defining mappings for each camera...
         };
     }
 
@@ -88,7 +90,9 @@ public class CamManager : MonoBehaviour
         // Deactivate all cameras
         for (int i = 0; i < cameras.Length; i++)
         {
-            cameras[i].gameObject.SetActive(i == index); // Only activate the desired camera
+            cameras[i].gameObject.SetActive(i == index);
+            cameras[i].gameObject.GetComponent<AudioListener>().enabled = (i== index);
+            cameras[i].tag = "Untagged";
         }
 
         currentCameraIndex = index;
@@ -107,6 +111,8 @@ public class CamManager : MonoBehaviour
             ToggleUI(true); // Show main UI
             UpdateUI();
         }
+        GameManager.Instance.SetCurrentCameraIndex(index);
+        cameras[index].tag = "MainCamera";
     }
 
     public Camera GetCamera(int cameraIndex)
@@ -185,6 +191,19 @@ public class CamManager : MonoBehaviour
         UpdateUI();
     }
 
+    IEnumerator WaitToRenderPipe()
+    {
+        yield return new WaitForEndOfFrame();
+        pipeCamera.enabled = false;
+        yield return new WaitForEndOfFrame();
+        pipeCamera.enabled = true;
+        pipeCamera.Render();
+    }
+
+    public int GetCurrentCameraIndex()
+    {
+        return currentCameraIndex;
+    }
 }
 
 // Helper class to store navigation options for each camera
@@ -201,3 +220,5 @@ public class CameraNavigation
         this.leave = leave;
     }
 }
+
+
