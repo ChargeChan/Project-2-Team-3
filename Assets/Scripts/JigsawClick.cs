@@ -21,7 +21,7 @@ public class JigsawClick : MonoBehaviour
         if (!isInJigsawMode && camManager != null)
         {
             // Check which camera is active out of Cam13, Cam11, and Cam19
-            Camera activeCamera = camManager.GetCamera(13) ?? camManager.GetCamera(11) ?? camManager.GetCamera(19);
+            Camera activeCamera = Camera.main;
 
             if (activeCamera != null)
             {
